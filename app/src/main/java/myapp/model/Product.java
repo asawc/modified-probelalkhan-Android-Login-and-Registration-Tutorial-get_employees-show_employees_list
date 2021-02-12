@@ -16,12 +16,12 @@ public class Product {
     @SerializedName("quantity")
     private final int quantity;
 
-    public Product(int quantity, String name, String symbol) {
+    /*public Product(int quantity, String name, String symbol) {
         this.id = -1;
         this.quantity = quantity;
         this.name = name;
         this.symbol = symbol;
-    }
+    }*/
 
     public Product(int id, int quantity, String name, String symbol) {
         this.id = id;
@@ -30,9 +30,7 @@ public class Product {
         this.symbol = symbol;
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
     public int getQuantity() { return quantity; }
 

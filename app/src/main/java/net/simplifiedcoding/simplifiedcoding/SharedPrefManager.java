@@ -17,6 +17,7 @@ public class SharedPrefManager {
 
     //the constants
     private static final String SHARED_PREF_NAME = "simplifiedcodingsharedpref";
+    private static final String KEY_USER_ID = "id";
     private static final String KEY_USERNAME = "keyusername";
     private static final String KEY_EMAIL = "keyemail";
     private static final String KEY_EMPLOYEE_ID = "id";
@@ -25,7 +26,7 @@ public class SharedPrefManager {
     private static final String KEY_EMPLOYEE_SYMBOL = "employeesymbol";
     private static final String KEY_ALL_EMPLOYEES = "employees";
     //private static final String KEY_GENDER = "keygender";
-    private static final String KEY_ID = "keyid";
+    private static final String KEY_PRODUCT_ID = "id";
     private static final String KEY_PRODUCTNAME = "productname";
     private static final String KEY_PRODUCTSYMBOL = "productsymbol";
     private static final String KEY_QUANTITY = "quantity";
@@ -55,7 +56,7 @@ public class SharedPrefManager {
     public void userLogin(User user) {
         SharedPreferences sharedPreferencesUser = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferencesUser.edit();
-        editor.putInt(KEY_ID, user.getId());
+        editor.putInt(KEY_USER_ID, user.getId());
         editor.putString(KEY_USERNAME, user.getUsername());
         editor.putString(KEY_EMAIL, user.getEmail());
         //editor.putString(KEY_GENDER, user.getGender());
@@ -72,7 +73,7 @@ public class SharedPrefManager {
     public User getUser() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return new User(
-                sharedPreferences.getInt(KEY_ID, -1),
+                sharedPreferences.getInt(KEY_USER_ID, -1),
                 sharedPreferences.getString(KEY_USERNAME, null),
                 sharedPreferences.getString(KEY_EMAIL, null) //,
                 //sharedPreferences.getString(KEY_GENDER, null)
@@ -103,7 +104,7 @@ public class SharedPrefManager {
     public void employeeLogin(Employee employee) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(KEY_ID, employee.getEmployeeId());
+        editor.putInt(KEY_EMPLOYEE_ID, employee.getEmployeeId());
         editor.putString(KEY_EMPLOYEE_NAME, employee.getEmployeeName());
         editor.putString(KEY_EMPLOYEE_SURNAME, employee.getEmployeeSurname());
         //editor.putString(KEY_GENDER, user.getGender());
@@ -135,7 +136,8 @@ public class SharedPrefManager {
         public Product getProduct() {
             SharedPreferences sharedPreferencesProduct = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
             return new Product(
-                    sharedPreferencesProduct.getInt(KEY_QUANTITY, -1),
+                    sharedPreferencesProduct.getInt(KEY_PRODUCT_ID, -1),
+                    sharedPreferencesProduct.getInt(KEY_QUANTITY, 0),
                     sharedPreferencesProduct.getString(KEY_PRODUCTNAME, null),
                     sharedPreferencesProduct.getString(KEY_PRODUCTSYMBOL, null) //,
                     //sharedPreferences.getString(KEY_GENDER, null)
