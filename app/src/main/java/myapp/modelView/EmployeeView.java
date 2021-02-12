@@ -5,18 +5,17 @@ public class EmployeeView {
     private String name;
     private String surname;
 
-    public EmployeeView(String sym, String name, String sname) {
-        this.symbol = sym;
-        this.name = name;
+    public EmployeeView(String sname, String name, String sym) {
         this.surname = sname;
+        this.name = name;
+        this.symbol = sym;
+
     }
 
-    public String getSymbol() {
-        return symbol;
-    }
+    public String getSurname() { return surname; }
 
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getName() {
@@ -27,11 +26,11 @@ public class EmployeeView {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getSymbol() {
+        return symbol;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
     }
 }
