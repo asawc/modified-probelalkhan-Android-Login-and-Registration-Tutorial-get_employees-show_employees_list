@@ -3,9 +3,9 @@ package myapp.modelView;
 public class ProductView {
     private String symbol;
     private String name;
-    private int quantity;
+    private String quantity;
 
-    public ProductView(String symbol, String name, int quantity) {
+    public ProductView(String symbol, String name, String quantity) {
         this.symbol = symbol;
         this.name = name;
         this.quantity = quantity;
@@ -15,11 +15,16 @@ public class ProductView {
         return symbol;
     }
 
+    public void setSymbol(String symbol) { this.symbol = symbol; }
+
     public String getName() {
         return name;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
+    public void setName(String name) { this.symbol = name; }
+
+    public String getQuantity() { return quantity; }
+
+    public void setQuantity(String quantity) { this.quantity = quantity; }
+
 }

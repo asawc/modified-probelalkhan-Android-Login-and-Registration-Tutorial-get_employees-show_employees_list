@@ -5,13 +5,16 @@ import com.google.gson.annotations.SerializedName;
 public class Product {
 
     private final int id;
-    private final int quantity;
+    //private final int quantity;
 
     @SerializedName("productname")
     private final String name;
 
     @SerializedName("productsymbol")
     private final String symbol;
+
+    @SerializedName("quantity")
+    private final int quantity;
 
     public Product(int quantity, String name, String symbol) {
         this.id = -1;
