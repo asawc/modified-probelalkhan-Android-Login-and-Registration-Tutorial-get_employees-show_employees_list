@@ -21,7 +21,7 @@ public class ProductView {
         return name;
     }
 
-    public void setName(String name) { this.symbol = name; }
+    public void setName(String name) { this.name = name; }
 
     public String getQuantity() { return quantity; }
 

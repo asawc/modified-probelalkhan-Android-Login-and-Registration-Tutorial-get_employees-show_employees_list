@@ -7,14 +7,14 @@ public class Product {
     private final int id;
     //private final int quantity;
 
-    @SerializedName("productname")
+    //@SerializedName("productname")
     private final String name;
 
-    @SerializedName("productsymbol")
+    //@SerializedName("productsymbol")
     private final String symbol;
 
-    @SerializedName("quantity")
-    private final int quantity;
+   // @SerializedName("quantity")
+    private final String quantity;
 
     /*public Product(int quantity, String name, String symbol) {
         this.id = -1;
@@ -23,18 +23,20 @@ public class Product {
         this.symbol = symbol;
     }*/
 
-    public Product(int id, int quantity, String name, String symbol) {
+    public Product(int id, String name, String symbol, String quantity) {
         this.id = id;
-        this.quantity = quantity;
-        this.name = name;
         this.symbol = symbol;
+        this.name = name;
+        this.quantity = quantity;
+
     }
 
     public int getId() { return id; }
 
-    public int getQuantity() { return quantity; }
+    public String getSymbol() { return symbol; }
 
     public String getName() { return name; }
 
-    public String getSymbol() { return symbol; }
+    public String getQuantity() { return quantity; }
+
 }

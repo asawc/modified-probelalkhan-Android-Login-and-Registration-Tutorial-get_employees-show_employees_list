@@ -124,9 +124,9 @@ public class ScanActivity extends AppCompatActivity {
                         //creating a product object
                         Product product = new Product(
                                 productJson.getInt("id"),
-                                productJson.getInt("quantity"),
+                                productJson.getString("productsymbol"),
                                 productJson.getString("productname"),
-                                productJson.getString("productsymbol")
+                                productJson.getString("quantity")
                         );
 
                         //storing the product in shared preferences

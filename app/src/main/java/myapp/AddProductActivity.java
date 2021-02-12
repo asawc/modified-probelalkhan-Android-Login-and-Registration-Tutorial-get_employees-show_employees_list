@@ -167,7 +167,7 @@ public class AddProductActivity extends AppCompatActivity {
                         //creating a new user object
                         Product product = new Product(
                                 productJson.getInt("id"),
-                                productJson.getInt("quantity"),
+                                productJson.getString("quantity"),
                                 productJson.getString("productname"),
                                 productJson.getString("productsymbol")
                         );
