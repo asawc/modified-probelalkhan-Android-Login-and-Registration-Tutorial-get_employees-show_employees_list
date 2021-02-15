@@ -15,34 +15,32 @@
         />
 -->
     <CheckedTextView
-        android:id="@+id/name"
+        android:id="@+id/product_symbol"
         style="?android:attr/spinnerDropDownItemStyle"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:ellipsize="marquee"
-        android:singleLine="true"
 
+        android:singleLine="true"
         android:text="Symbol"
         android:textSize="@dimen/product_dropdown_item_text_size" />
 
     <CheckedTextView
-        android:id="@+id/symbol"
+        android:id="@+id/product_name"
         style="?android:attr/spinnerDropDownItemStyle"
-        android:layout_width="180dp"
+        android:layout_width="230dp"
         android:layout_height="50dp"
-        android:layout_toRightOf="@id/name"
         android:ellipsize="marquee"
         android:singleLine="true"
         android:text="Name"
         android:textSize="@dimen/product_dropdown_item_text_size" />
 
     <CheckedTextView
-        android:id="@+id/product_quantity"
+        android:id="@+id/quantity"
         style="?android:attr/spinnerDropDownItemStyle"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="5dp"
         android:layout_toRightOf="@id/symbol"
         android:ellipsize="marquee"
         android:singleLine="true"

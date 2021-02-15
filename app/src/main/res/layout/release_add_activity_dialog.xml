@@ -52,6 +52,17 @@
             android:text="Pracownik"
             android:visibility="gone"/>
 
+        <TextView
+            android:id="@+id/productChecked_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Product"
+            android:textAlignment="center"
+            android:textColor="#36936b"
+            android:textSize="26dp"
+            android:visibility="gone" />
+
         </LinearLayout>
 
         <Button
