@@ -7,10 +7,10 @@ public class Product {
     private final int id;
     //private final int quantity;
 
-    //@SerializedName("productname")
+    @SerializedName("productname")
     private final String name;
 
-    //@SerializedName("productsymbol")
+    @SerializedName("productsymbol")
     private final String symbol;
 
    // @SerializedName("quantity")
@@ -23,7 +23,7 @@ public class Product {
         this.symbol = symbol;
     }*/
 
-    public Product(int id, String name, String symbol, String quantity) {
+    public Product(int id, String symbol, String name, String quantity) {
         this.id = id;
         this.symbol = symbol;
         this.name = name;

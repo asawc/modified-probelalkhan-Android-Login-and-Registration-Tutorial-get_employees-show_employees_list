@@ -17,4 +17,15 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="make_an_order">Make an order</string>
+    <string name="dialog_title">Choose products</string>
+    <string name="ok_label">OK</string>
+    <string name="dismiss_label">Dismiss</string>
+    <string name="clear_all_label">Clear all</string>
+    <string name="choose_employees">Choose employees</string>
+
+    <string name="choose_products">choose products</string>
+    <string name="productsymbol">productsymbol</string>
+    <string name="productname">productname</string>
 </resources>
